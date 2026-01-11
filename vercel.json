@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/generate",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/api/status/(.*)",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/xyz001",
+      "destination": "/api/index.py"
+    }
+  ],
+  "functions": {
+    "api/index.py": {
+      "runtime": "vercel-python@0.14.0",
+      "memory": 1024,
+      "maxDuration": 15
+    }
+  }
+}
